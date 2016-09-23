@@ -39,15 +39,15 @@ var Screen=function (cid,config) {
 };
 Screen.Config={                         //为属性赋初值
     ballsnum:10,
-    spring:0.8,
+    spring:0.9,
     bounce:-0.9,
-    gravity:0.05
+    gravity:0.03
 };
 Screen.prototype={
     initialize:function () {
         var self=this;
         self.createBalls();
-        self.timer=setInterval(function (){self.hitBalls()}, 30)
+        self.timer=setInterval(function (){self.hitBalls()}, 25)
     },
     createBalls:function () {
         var self=this, 
